@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
        // ArticleSeeder（シーダークラス）の呼び出し
-+         $this->call(ArticleSeeder::class);
+        $this->call(ArticleSeeder::class);
     }
 }
