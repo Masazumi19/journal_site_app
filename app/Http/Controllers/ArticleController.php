@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 
 class ArticleController extends Controller
 {
@@ -47,7 +48,9 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        //id で検索したデータをビューへ探す
+        $article = Article::find($id);
+        return view ('articles.show',['article' => $article]);
     }
 
     /**
