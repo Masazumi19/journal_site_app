@@ -7,14 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>論文詳細</h1>
-
-    {{ $article->title  }}
     
-    <p>
-{{ $article->body  }}
-    </a>
-    </p>
-<button onclick="location.href='/articles'">一覧へ戻る</button>
 </body>
 </html>

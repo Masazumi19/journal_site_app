@@ -18,6 +18,5 @@
             </a>
         </p>
     @endforeach
-</body>
 
 </html>
