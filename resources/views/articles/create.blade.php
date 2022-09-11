@@ -23,7 +23,7 @@
 
         </p>
 
-        <input type="submit" value="登録">
+        <input type="submit" value="投稿">
 
     </form>
 </body>
