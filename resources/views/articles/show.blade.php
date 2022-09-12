@@ -13,8 +13,8 @@
     <h1>論文詳細</h1>
 
     <p>タイトル:{{ $article->title }} </p>
-    
-    
+
+
 
     <p>
         {{ $article->body }}
