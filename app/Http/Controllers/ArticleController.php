@@ -71,7 +71,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::find($id);
+        return view('articles.edit', ['article' => $article ]);
     }
 
     /**
@@ -81,19 +82,37 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Article $request, $id)
     {
-        //
-    }
+        // インスタンスの作成
+        $article =  Article::find($id);
 
+        // 値の更新
+        $article->title = $request->title;
+        $article->body = $request->body;
+
+        // インスタンス更新
+        $article->save();
+
+        // 更新したらindexに戻る
+        return redirect('/articles');
+    }
+    
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+        public function destroy($id)
     {
-        //
+    //インスタンスの作成(データ取得)
+        $article = Article::find($id);
+    //データ削除
+        $article->delete();
+    //削除したらindexに戻る
+        return redirect('/articles');
     }
 }
+
+
