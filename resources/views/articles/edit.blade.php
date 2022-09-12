@@ -25,7 +25,7 @@
             </ul>
         </div>
     @endif
-<!-- 更新先はmemosのidにしないと増える php artisan rote:listで確認① -->
+    <!-- 更新先はmemosのidにしないと増える php artisan rote:listで確認① -->
     <form action="/articles/{{ $article->id }}" method="post">
         @csrf
         @method('PATCH')
